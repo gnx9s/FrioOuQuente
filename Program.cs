@@ -27,23 +27,33 @@ while(resposta != numeroAleatorio)
 
             if (resposta > 0 && resposta < 100)
             {
-            if (distancia <= 3 && distancia >= 1)
+            if (tentativas > 7)
+            {
+                corzinha("A quantidade de tentativas foi alcançada...", ConsoleColor.Red);
+                return;
+            }
+            
+            else if (distancia <= 3 && distancia >= 1)
             {
                 corzinha("Está PELANDO, o número escrito está bem próximo! ", ConsoleColor.DarkYellow);
+                corzinha("Digite outro número...", ConsoleColor.DarkMagenta);
             }
             else if (distancia <= 10 && distancia > 3)
             {
                 corzinha("Está QUENTE, continue tentando! ", ConsoleColor.Yellow);
+                corzinha("Digite outro número...", ConsoleColor.DarkMagenta);
             }
             else if (distancia <= 30 && distancia > 10)
             {
                 corzinha("Está FRIO, tente outro número! ", ConsoleColor.DarkBlue);
                 distancia2();
+                corzinha("Digite outro número...", ConsoleColor.DarkMagenta);
             }
             else if (distancia > 30)
             {
                 corzinha("Está CONGELANDO, o número digitado está longe do que eu pensei! ", ConsoleColor.Blue);
                 distancia2();
+                corzinha("Digite outro número...", ConsoleColor.DarkMagenta);
             }
             }
 
