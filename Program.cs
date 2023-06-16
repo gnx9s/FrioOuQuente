@@ -25,7 +25,7 @@ while(resposta != numeroAleatorio)
             distancia = Math.Abs(resposta - numeroAleatorio);
             tentativas++;
 
-            if (resposta > 0 && resposta < 100)
+            if (resposta > 0 && resposta <= 100)
             {
             if (tentativas > 7)
             {
